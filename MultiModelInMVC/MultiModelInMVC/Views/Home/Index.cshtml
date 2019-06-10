@@ -1,0 +1,33 @@
+﻿@model MultiModelInMVC.Models.ViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h3>-------------CATEGORIES------------</h3>
+    <div>
+        <ul>
+            @foreach (var item in Model.Categories)
+            {
+                <li>@item.CategoryName</li>
+            }
+        </ul>
+    </div>
+    <h3>--------------SUPPLIERS-------------</h3>
+    <div>
+        <ul>
+            @foreach (var item in Model.Suppliers)
+            {
+                <li>@item.CompanyName</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>
